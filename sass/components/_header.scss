@@ -1,7 +1,7 @@
 .header {
   background-color: #ffffff;
   border-bottom: 1px solid #ececec;
-  .container {
+  > .container {
     display: flex;
     align-items: center;
   }
@@ -23,13 +23,12 @@
   }
 }
 
-
 .logo__link:not(:first-child) {
   margin-right: 93px;
 }
 .menu-list,
 .connect-list {
-  display: flex;
+  display: none;
 }
 .connect {
   margin-left: auto;
@@ -76,4 +75,45 @@
 }
 .connect-list__item:not(:last-child) {
   margin-right: 50px;
+}
+.menu-open-btn,
+.menu-close-btn {
+  background-color: transparent;
+  border: none;
+  display: block;
+  margin-left: auto;
+}
+.mob-menu {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  height: 100vh;
+  width: 100vw;
+  z-index: 5;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+.open-icon,
+.close-icon {
+  fill: #212121;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
+.menu-close-btn {
+  margin-bottom: 30px;
+}
+.mob-menu-list__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+.mob-menu-list__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.18;
+  // text-align: center;
+  letter-spacing: 0.02em;
+  color: #212121;
 }

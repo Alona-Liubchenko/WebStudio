@@ -5,6 +5,10 @@
     margin-left: -30px;
     margin-bottom: -30px;
   }
+  @include desktop {
+    display: flex;
+    margin-left: -30px;
+  }
 }
 .feature-list__item {
   // max-width: 100%;
@@ -12,6 +16,11 @@
     width: calc(100% / 2 - 30px);
     margin-left: 30px;
     margin-bottom: 30px;
+  }
+  @include desktop {
+    width: calc(100% / 4 - 30px);
+    margin-left: 30px;
+    margin-bottom: 0;
   }
 }
 
@@ -39,4 +48,8 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-bottom: var(--projegt-list-gap);
+  @include desktop {
+    margin: 0;
+  }
 }
