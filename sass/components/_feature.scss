@@ -12,6 +12,7 @@
 }
 .feature-list__item {
   // max-width: 100%;
+  margin-bottom: var(--projegt-list-gap);
   @include tablet {
     width: calc(100% / 2 - 30px);
     margin-left: 30px;
@@ -48,8 +49,4 @@
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
-  margin-bottom: var(--projegt-list-gap);
-  @include desktop {
-    margin: 0;
-  }
 }

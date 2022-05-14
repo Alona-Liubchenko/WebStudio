@@ -76,13 +76,13 @@ body {
   margin: 0 auto;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .container {
     width: 480px;
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .container {
     width: 768px;
   }
@@ -318,6 +318,13 @@ body {
   color: var(--accent-color);
 }
 
+.mob-soc-menu-list__link:not(:last-child) {
+  display: block;
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  color: currentColor;
+}
+
 .hero {
   background-color: #2f303a;
   width: 100%;
@@ -339,14 +346,14 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/fon-tab.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/fon-tab.jpg);
   }
 }
 
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (max-width: 1199px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (max-width: 1199px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/fon-tab-2x.jpg);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/fon-tab-2x.jpg);
@@ -417,7 +424,7 @@ body {
           justify-content: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -438,7 +445,11 @@ body {
   }
 }
 
-@media screen and (min-width: 768px) {
+.feature-list__item {
+  margin-bottom: var(--projegt-list-gap);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .feature-list__item {
     width: calc(100% / 2 - 30px);
     margin-left: 30px;
@@ -486,13 +497,6 @@ body {
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
-  margin-bottom: var(--projegt-list-gap);
-}
-
-@media screen and (min-width: 1200px) {
-  .feature-list__text {
-    margin: 0;
-  }
 }
 
 .work {
