@@ -1,14 +1,19 @@
 .project-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--projegt-list-gap));
-  margin-left: calc(-1 * var(--projegt-list-gap));
+  @include desktop {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--projegt-list-gap));
+    margin-left: calc(-1 * var(--projegt-list-gap));
+  }
 }
 
 .project-item {
-  flex-basis: calc(100% / 3 - var(--projegt-list-gap));
   margin-top: var(--projegt-list-gap);
-  margin-left: var(--projegt-list-gap);
+  @include desktop {
+    flex-basis: calc(100% / 3 - var(--projegt-list-gap));
+    margin-top: var(--projegt-list-gap);
+    margin-left: var(--projegt-list-gap);
+  }
 }
 
 .project-wrap {

@@ -1,10 +1,14 @@
 .filtre-list {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  .current {
-    background-color: var(--accent-color);
-    color: #ffffff;
+  flex-wrap: wrap;
+  @include desktop {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    .current {
+      background-color: var(--accent-color);
+      color: #ffffff;
+    }
   }
 }
 .filtre-item:nth-child(n + 2) {
