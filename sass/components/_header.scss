@@ -6,9 +6,12 @@
     align-items: center;
     @include tablet {
       align-items: center;
+      justify-content: space-between;
     }
-  }
-}
+    @include desktop {
+    align-items: center;
+    justify-content: space-between;}
+}}
 .navigation .current {
   color: var(--accent-color);
   position: relative;
@@ -35,20 +38,17 @@
   display: none;
   @include tablet {
     display: flex;
-    margin-left: 88px;
   }
+
   @include desktop {
     display: flex;
   }
 }
-.connect {
-  margin-left: auto;
-}
+
 .connect-list {
   display: none;
   @include tablet {
     display: block;
-    margin-left: 84px;
   }
   @include desktop {
     display: flex;
@@ -137,6 +137,7 @@
     overflow: auto;
   }
 }
+
 .open-icon,
 .close-icon {
   fill: #212121;
@@ -145,8 +146,8 @@
     fill: var(--accent-color);
   }
 }
+
 .menu-close-btn {
-  // margin-bottom: 30px;
   cursor: pointer;
 }
 .mob-menu-list,
@@ -177,7 +178,7 @@
   letter-spacing: 0.02em;
   color: var(--accent-color);
   display: block;
-  // margin-top: 301px;
+  margin-bottom: 32px;
 }
 .mob-connect-list__mail {
   font-weight: 500;
@@ -190,7 +191,10 @@
 }
 .mob-soc-menu-list {
   display: flex;
-  justify-content: center;
+
+  margin-top: 64px;
+  margin-left: 40px;
+  margin-bottom: 48px;
 }
 
 .mob-soc-menu-list__item {
@@ -210,6 +214,7 @@
     border-right: 0;
   }
 }
+
 .mob-soc-menu-list__link {
   color: var(--accent-color);
 }

@@ -142,6 +142,20 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header > .container {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -177,7 +191,6 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 88px;
   }
 }
 
@@ -189,10 +202,6 @@ body {
   }
 }
 
-.connect {
-  margin-left: auto;
-}
-
 .connect-list {
   display: none;
 }
@@ -200,7 +209,6 @@ body {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .connect-list {
     display: block;
-    margin-left: 84px;
   }
 }
 
@@ -368,6 +376,7 @@ body {
   letter-spacing: 0.02em;
   color: var(--accent-color);
   display: block;
+  margin-bottom: 32px;
 }
 
 .mob-connect-list__mail {
@@ -384,9 +393,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  margin-top: 64px;
+  margin-left: 40px;
+  margin-bottom: 48px;
 }
 
 .mob-soc-menu-list__item {
@@ -534,6 +543,10 @@ body {
 }
 
 .feature-list__item {
+  max-width: 100%;
+}
+
+.feature-list__item:not(:last-child) {
   margin-bottom: var(--projegt-list-gap);
 }
 
@@ -684,6 +697,7 @@ body {
     -ms-flex-preferred-size: calc(100% / 4 - 30px);
         flex-basis: calc(100% / 4 - 30px);
     margin-left: 30px;
+    margin-top: 0;
   }
 }
 
@@ -694,6 +708,14 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
+}
+
+@media screen and (min-width: 1200px) {
+  .team-title {
+    font-size: 36px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .team-list__cards {
@@ -1071,11 +1093,21 @@ body {
 }
 
 .filtre-list {
+  margin-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filtre-list {
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1094,8 +1126,14 @@ body {
   }
 }
 
-.filtre-item:nth-child(n + 2) {
-  margin-left: 8px;
+.filtre-item:not(:last-child) {
+  margin-right: 8px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .filtre-item:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
 }
 
 .filtre-btn {
@@ -1125,6 +1163,18 @@ body {
           box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: calc(-1 * var(--projegt-list-gap));
+    margin-left: calc(-1 * var(--projegt-list-gap));
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .project-list {
     display: -webkit-box;
@@ -1137,8 +1187,17 @@ body {
   }
 }
 
-.project-item {
+.project-item:not(:first-child) {
   margin-top: var(--projegt-list-gap);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .project-item {
+    -ms-flex-preferred-size: calc(100% / 2 - var(--projegt-list-gap));
+        flex-basis: calc(100% / 2 - var(--projegt-list-gap));
+    margin-top: var(--projegt-list-gap);
+    margin-left: var(--projegt-list-gap);
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1185,6 +1244,9 @@ body {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .project-title {
@@ -1205,7 +1267,14 @@ body {
 }
 
 .project-link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1233,13 +1302,34 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
-  min-height: 581px;
+  width: 95vw;
+  min-height: 609px;
   background: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .modal {
+    width: 450px;
+    min-height: 609px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .modal {
+    width: 450px;
+    min-height: 609px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    min-height: 581px;
+  }
 }
 
 .modal-close {
@@ -1275,11 +1365,17 @@ body {
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--title-color);
   margin-bottom: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    line-height: 1.15;
+  }
 }
 
 .form-field {
@@ -1391,8 +1487,8 @@ body {
 
 .modal-check-text {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
   color: #757575;
   display: -webkit-box;
@@ -1422,6 +1518,13 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-check-text {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .check-icon {
@@ -1460,11 +1563,18 @@ body {
 .modal-check-link {
   display: inline-block;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration: underline;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-check-link {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .modal-button {
