@@ -9,9 +9,10 @@
       justify-content: space-between;
     }
     @include desktop {
-    align-items: center;
+      align-items: center;
+    }
   }
-}}
+}
 .navigation .current {
   color: var(--accent-color);
   position: relative;
@@ -40,8 +41,9 @@
   }
 }
 .connect {
-  @include desktop {margin-left: auto;}
-  
+  @include desktop {
+    margin-left: auto;
+  }
 }
 .connect-list {
   display: none;
@@ -50,7 +52,6 @@
   }
   @include desktop {
     display: flex;
- 
   }
 }
 
@@ -154,6 +155,9 @@
 .mob-menu-list,
 .mob-connect-list {
   margin-left: 40px;
+  @media screen and (max-width: 479px) {
+    margin-left: 20px;
+  }
 }
 .mob-menu-list__item {
   &:not(:last-child) {
@@ -199,11 +203,14 @@
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
- 
 
   margin-top: 64px;
   margin-left: 40px;
   margin-bottom: 48px;
+  margin-left: 40px;
+  @media screen and (max-width: 479px) {
+    margin-left: 20px;
+  }
 }
 
 .mob-soc-menu-list__item {
