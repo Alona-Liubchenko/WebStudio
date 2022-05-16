@@ -197,6 +197,8 @@
 .mob-soc-menu-list {
   width: 100vw;
   display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
  
 
   margin-top: 64px;
@@ -210,7 +212,6 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
   padding-right: 10px;
-  padding-left: 10px;
   margin: 0;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
   &:nth-child(1) {
