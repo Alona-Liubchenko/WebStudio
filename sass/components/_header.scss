@@ -10,7 +10,7 @@
     }
     @include desktop {
     align-items: center;
-    justify-content: space-between;}
+  }
 }}
 .navigation .current {
   color: var(--accent-color);
@@ -28,12 +28,6 @@
     border-radius: 2px;
   }
 }
-
-.logo__link:not(:first-child) {
-  @include desktop {
-    margin-right: 93px;
-  }
-}
 .menu-list {
   display: none;
   @include tablet {
@@ -42,9 +36,13 @@
 
   @include desktop {
     display: flex;
+    margin-left: 93px;
   }
 }
-
+.connect {
+  @include desktop {margin-left: auto;}
+  
+}
 .connect-list {
   display: none;
   @include tablet {
@@ -52,6 +50,7 @@
   }
   @include desktop {
     display: flex;
+ 
   }
 }
 
@@ -141,6 +140,7 @@
 .open-icon,
 .close-icon {
   fill: #212121;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     fill: var(--accent-color);
@@ -166,6 +166,7 @@
   text-align: center;
   letter-spacing: 0.02em;
   color: #212121;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     color: var(--accent-color);
