@@ -124,8 +124,8 @@
   left: 0;
   background-color: #fff;
   height: 100vh;
-  width: 100%;
-  z-index: 95;
+  width: 100vw;
+  z-index: 995;
   padding-top: 10px;
   padding-bottom: 10px;
   .container {
@@ -195,8 +195,9 @@
   margin-top: 33px;
 }
 .mob-soc-menu-list {
+  width: 100vw;
   display: flex;
-  flex-wrap: wrap;
+ 
 
   margin-top: 64px;
   margin-left: 40px;
