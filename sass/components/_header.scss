@@ -130,6 +130,7 @@
   padding-bottom: 10px;
   .container {
     display: flex;
+    width: 100%;
     height: 100%;
     flex-direction: column;
     justify-content: space-between;
@@ -192,6 +193,7 @@
 }
 .mob-soc-menu-list {
   display: flex;
+  flex-wrap: wrap;
 
   margin-top: 64px;
   margin-left: 40px;
