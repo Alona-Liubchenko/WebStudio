@@ -406,7 +406,6 @@ body {
 }
 
 .mob-soc-menu-list {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

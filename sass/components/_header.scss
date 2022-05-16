@@ -199,7 +199,6 @@
   margin-top: 33px;
 }
 .mob-soc-menu-list {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -207,6 +206,7 @@
   margin-top: 64px;
   margin-left: 40px;
   margin-bottom: 48px;
+
   @media screen and (max-width: 479px) {
     margin-left: 20px;
   }
