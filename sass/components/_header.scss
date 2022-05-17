@@ -11,6 +11,12 @@
     @include desktop {
       align-items: center;
     }
+    > .logo {
+      @media screen and (max-width: 767px) {
+      padding: 16px 0;
+        
+      }
+    }
   }
 }
 .navigation .current {
